@@ -35,3 +35,5 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
 });
+
+export default ProfileScreen;
