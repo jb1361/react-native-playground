@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/react-navigation": "^2.13.3",
     "bugsnag-react-native": "^2.12.4",
     "react": "16.6.1",
     "react-native": "0.57.5",
