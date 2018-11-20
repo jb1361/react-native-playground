@@ -1,9 +1,9 @@
-import {Component} from "react";
-import {Button} from "react-native";
+import {Component} from 'react';
+import {Button} from 'react-native';
 
 class HomeScreen extends Component {
     static navigationOptions = {
-        title: 'Welcome',
+        title: 'Welcome'
     };
     render() {
         const {navigate} = this.props.navigation;
