@@ -11,16 +11,13 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {AppStack} from './AppStack';
+import HomeScreen from "./screens/home-screen";
 
 class App extends Component {
     render() {
         return (
-             <AppStack style={{backgroundColor: 'transparent'}}/>
-          // <HomeScreen/>
-          // <View style={styles.container}>
-          //     <Text style={styles.welcome}>Welcome to React Native!!!</Text>
-          //     <Text style={styles.instructions}>To get started, edit App.tsx</Text>
-          // </View>
+            // <AppStack style={{backgroundColor: 'transparent'}}/>
+             <HomeScreen/>
         );
     }
 }
