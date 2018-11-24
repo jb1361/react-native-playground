@@ -9,8 +9,11 @@ class ProfileScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>Welcome to {this.props.name} profile screen</Text>
-                <Text style={styles.instructions}>To get started, edit App.tsx</Text>
+                <Button
+                    title="Home"
+                    onPress={() => this.props.navigation.navigate('Home')}
+                />
+                <Text style={styles.welcome}>Welcome to {this.props.navigation.getParam('name')}'s profile screen</Text>
                 <Button
                     title="Go back"
                     onPress={() => this.props.navigation.goBack()}
