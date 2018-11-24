@@ -1,6 +1,5 @@
-import {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {Component} from 'react';
+import {Button, StyleSheet, Text, View} from 'react-native';
 
 class ProfileScreen extends Component {
 
@@ -10,8 +9,12 @@ class ProfileScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>Welcome to profile screen</Text>
+                <Text style={styles.welcome}>Welcome to {this.props.name} profile screen</Text>
                 <Text style={styles.instructions}>To get started, edit App.tsx</Text>
+                <Button
+                    title="Go back"
+                    onPress={() => this.props.navigation.goBack()}
+                />
             </View>
         );
     }

@@ -9,36 +9,22 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {AppStack} from './AppStack';
-import HomeScreen from "./screens/home-screen";
+import {createNavigationContainer, createStackNavigator} from 'react-navigation';
+import HomeScreen from './screens/home-screen';
+import ProfileScreen from './screens/profile';
 
-class App extends Component {
+const AppNavigator = createStackNavigator({
+        Home: {screen: HomeScreen},
+        Profile: {screen: ProfileScreen, name: String}
+    },
+    {
+        initialRouteName: 'Home'
+    });
+
+const AppContainer = createNavigationContainer(AppNavigator);
+
+export default class App extends Component {
     render() {
-        return (
-            // <AppStack style={{backgroundColor: 'transparent'}}/>
-             <HomeScreen/>
-        );
+        return <AppContainer/>;
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF'
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5
-    }
-});
-
-export default App;
