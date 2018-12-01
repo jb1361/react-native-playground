@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
+import {NavigationInjectedProps} from 'react-navigation';
 
-class ProfileScreen extends Component {
+interface NavigationProps {
+  name: string;
+}
+interface ProfileScreenProps extends NavigationInjectedProps<NavigationProps> {
+  someReduxInjectedvalue: string;
+}
+
+class ProfileScreen extends Component<ProfileScreenProps> {
 
     static navigationOptions = {
         title: 'Welcome'

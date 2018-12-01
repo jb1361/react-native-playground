@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import {Button} from 'react-native';
+import {NavigationInjectedProps} from 'react-navigation';
 
-class HomeScreen extends Component {
+interface HomeScreenProps extends NavigationInjectedProps {
+  someReduxInjectedvalue: string;
+}
+
+class HomeScreen extends Component<HomeScreenProps> {
     static navigationOptions = {
         title: 'Welcome'
     };
